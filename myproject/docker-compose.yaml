@@ -1,0 +1,55 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: django_app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/bharat_app
+    ports:
+      - "8000:8000"
+
+    
+    environment:
+      - DEBUG=1
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:alpine"
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+#     depends_on:
+#       - db
+#       - redis
+#     environment:
+#       - DEBUG=True
+#       - DB_HOST=db
+#       - DB_NAME=mydatabase
+#       - DB_USER=myuser
+#       - DB_PASS=mypassword
+
+#   db:
+#     image: postgres:15
+#     container_name: postgres_db
+#     restart: always
+#     environment:
+#       POSTGRES_DB: mydatabase
+#       POSTGRES_USER: myuser
+#       POSTGRES_PASSWORD: mypassword
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+
+#   redis:
+#     image: redis:7
+#     container_name: redis_cache
+#     restart: always
+#     ports:
+#       - "6379:6379"
+
+# volumes:
+#   postgres_data:
