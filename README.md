@@ -67,3 +67,29 @@ __Solution__:
 
 # 🧑‍💻 Author Name: GOVI PRASATH R 
 # 0Email: goviprasath18@gmail.com
+
+# Hosting Details
+Why PythonAnywhere Instead of AWS or Heroku?
+ During the deployment phase, I initially planned to host my project on AWS or Heroku. However, I encountered some challenges:
+
+# AWS Hosting Issues:
+
+AWS requires a valid credit or debit card for account verification.
+# I attempted to use my Visa debit card, but AWS did not accept it, showing an error: 
+
+  "The payment method cannot be verified. Check your information and try again."
+  Since I couldn't verify my account, I was unable to use AWS services.
+  Heroku Hosting Issue  
+
+Deploying on Heroku requires a paid plan, which was not feasible for me at this time.
+Alternative Solution: PythonAnywhere
+Due to the constraints with AWS and Heroku, I decided to use PythonAnywhere, which offers free hosting for Python-based applications.
+
+Steps Taken for Deployment:
+Uploaded my Django project to PythonAnywhere.
+Configured the virtual environment and dependencies.
+Updated the WSGI file to properly run the Django application.
+Checked the error logs to resolve any configuration issues.
+
+# Successfully deployed the project at:
+# https://goviprasath.pythonanywhere.com/faqs/
