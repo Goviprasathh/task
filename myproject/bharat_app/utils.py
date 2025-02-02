@@ -8,4 +8,4 @@ def translate_text(text, target_lang='en'):
         return translation.text
     except Exception as e:
         print(f"Translation failed: {e}")
-        return text  # Return the original text if translation fails
+        return text 
